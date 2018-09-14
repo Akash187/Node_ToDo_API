@@ -1,0 +1,22 @@
+{
+  "name": "node_todo_api",
+  "version": "1.0.0",
+  "description": "Creating API for ToDo App using MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akash187/Node_ToDo_API.git"
+  },
+  "author": "Akash Kumar Seth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Akash187/Node_ToDo_API/issues"
+  },
+  "homepage": "https://github.com/Akash187/Node_ToDo_API#readme",
+  "dependencies": {
+    "mongodb": "^3.1.4"
+  }
+}
