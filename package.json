@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Akash187/Node_ToDo_API#readme",
   "dependencies": {
-    "mongodb": "^3.1.4"
+    "mongodb": "^3.1.4",
+    "mongoose": "^5.2.14"
   }
 }
