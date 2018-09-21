@@ -20,6 +20,8 @@ app.post('/todos', (req, res) => {
   }, (e) => {
     res.status(400).send(e);
   });
+}, (e) => {
+  console.log("Error in post /todos");
 });
 
 app.get('/todos', (req,res) => {
@@ -28,6 +30,8 @@ app.get('/todos', (req,res) => {
   }, (e) => {
     res.status(400).send(e);
   });
+},(e) => {
+  console.log("Error in get /todos");
 });
 
 app.get('/todos/:id', (req, res) => {
