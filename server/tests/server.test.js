@@ -103,8 +103,8 @@ describe('DELETE /todos/:id', () => {
     request(app)
       .delete(`/todos/${hexId}`)
       .expect(200).expect((res) => {
-        expect(res.body.todo._id).toBe(hexId);
-      })
+      expect(res.body.todo._id).toBe(hexId);
+    })
       .end((err, res) => {
         if (err) {
           return done(err);
