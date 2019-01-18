@@ -1,5 +1,5 @@
 {
-  "name": "node_todo_api",
+  "name": "node-todo-api",
   "version": "1.0.0",
   "description": "Creating API for ToDo App using MongoDB.",
   "main": "index.js",
