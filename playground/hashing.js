@@ -5,7 +5,7 @@ let password = '123abc!';
 bcrypt.genSalt(10, (err, salt) => {
   bcrypt.hash(password, salt, (err, hash) => {
     // Store hash in your password DB.
-    console.log(hash);
+    return hash;
   });
 });
 
