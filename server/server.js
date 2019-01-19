@@ -1,13 +1,14 @@
-let express = require('express');
-let bodyParser = require('body-parser');
-let {ObjectID} = require('mongodb');
-let _ = require('lodash');
+const express = require('express');
+const bodyParser = require('body-parser');
+const {ObjectID} = require('mongodb');
+const _ = require('lodash');
 
-let {mongoose} = require('./db/mongoose');
-let {Todo} = require('./modals/todo');
-let {User} = require('./modals/user');
+const {mongoose} = require('./db/mongoose');
+const {Todo} = require('./modals/todo');
+const {User} = require('./modals/user');
+const {authenticate} = require('./middleware/authenticate');
 
-let app = express();
+const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
@@ -103,6 +104,10 @@ app.post('/users', (req, res) => {
   })
 }, (e) => {
   console.log("Error in post /users");
+});
+
+app.get('/users/me', authenticate, (req, res) => {
+  res.send(req.user);
 });
 
 app.listen(port, () => {
